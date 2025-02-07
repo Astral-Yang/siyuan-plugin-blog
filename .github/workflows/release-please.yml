@@ -16,7 +16,7 @@ jobs:
           # this assumes that you have created a personal access token
           # (PAT) and configured it as a GitHub action secret named
           # `GH_TOKEN` (this secret name is not important).
-          token: ${{ secrets.GH_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           # optional. customize path to release-please-config.json
           config-file: release-please-config.json
           # optional. customize path to .release-please-manifest.json
@@ -88,7 +88,7 @@ jobs:
       # https://github.com/philips-labs/terraform-aws-github-runner/blob/main/.github/workflows/release.yml#L46
       - name: Upload package.zip to the release
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           for f in $(find ./build -name '*.zip'); do
             gh release upload ${{ steps.release.outputs.tag_name }} $f
