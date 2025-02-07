@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.0.1](https://github.com/Astral-Yang/siyuan-plugin-blog/compare/siyuan-plugin-blog-v7.0.0...siyuan-plugin-blog-v7.0.1) (2025-02-07)
+
+
+### Bug Fixes
+
+* 尝试修复样式污染 ([50758f8](https://github.com/Astral-Yang/siyuan-plugin-blog/commit/50758f822ae32d2ed60b9b99fa4045359c36355c))
+
 ## [7.0.0](https://github.com/Astral-Yang/siyuan-plugin-blog/compare/siyuan-plugin-blog-v6.4.0...siyuan-plugin-blog-v7.0.0) (2025-02-07)
 
 
