@@ -71,7 +71,7 @@ export class Topbar {
     if (!this.contentMenu) {
       this.contentMenu = new Menu(menuID)
     }
-    this.contentMenuElement?.remove()
+    // this.contentMenuElement?.remove()
     const contentWrapper = Object.assign(document.createElement("div"), {
       id: `${menuID}-wrapper`,
       className: "share-free-edition-menu-content"
