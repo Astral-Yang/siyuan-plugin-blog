@@ -80,8 +80,8 @@ onBeforeMount(() => {
 
     <span class="text s-dark" @click="goHome()">{{ t("go.home") }}</span>
 
-    <span class="text dot">.</span>
-    <span class="text s-dark" @click="goAbout()">{{ t("syp.about") }}</span>
+<!--    <span class="text dot">.</span>-->
+<!--    <span class="text s-dark" @click="goAbout()">{{ t("syp.about") }}</span>-->
   </div>
   <div v-else class="footer">
     <static-buttons :default-mode="colorMode?'dark':'light'" @toggle-theme-mode="emitToggleThemeMode" />
