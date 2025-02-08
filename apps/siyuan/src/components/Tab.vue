@@ -74,7 +74,6 @@ function handleTabClick(index: number) {
   border-radius 8px
   overflow hidden
   background-color #fff
-  box-shadow 0 1px 3px rgba(0, 0, 0, 0.1)
   margin 10px
 
 .tabs.vertical
