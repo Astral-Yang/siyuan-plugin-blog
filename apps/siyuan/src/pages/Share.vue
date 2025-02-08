@@ -128,7 +128,7 @@ const refreshShare = () => {
         async () => {
           await updateStaticShare(props.id)
           logger.info("updated static share in auth mode")
-          showMessage(props.pluginInstance.i18n["share.refreshInfo"], 2000, "info")
+          //showMessage(props.pluginInstance.i18n["share.refreshInfo"], 2000, "info")
           resolve()
         },
         () => {
@@ -195,7 +195,7 @@ const handleSetHome = () => {
   new Promise<void>((resolve, reject) => {
     handleMethodAsync(async () => {
       if (formData.isHome) {
-        formData.setting.homePageId = props.id
+        formData.setting.homePageId = encrypt(props.id)
       } else {
         formData.setting.homePageId = undefined
       }

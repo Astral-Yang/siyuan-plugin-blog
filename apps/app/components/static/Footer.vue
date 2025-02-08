@@ -8,21 +8,21 @@
   -->
 
 <script setup lang="ts">
-import { useI18n } from "vue-i18n"
-import { DateUtil, StrUtil } from "zhi-common"
-import { useProviderMode } from "~/composables/useProviderMode"
+import {useI18n} from "vue-i18n"
+import {DateUtil, StrUtil} from "zhi-common"
+import {useProviderMode} from "~/composables/useProviderMode"
 import * as pkg from "~/package.json"
-import { useBaseUrl } from "~/plugins/libs/renderer/useClientBaseUrl"
+import {useBaseUrl} from "~/plugins/libs/renderer/useClientBaseUrl"
 import AppConfig from "~/app.config"
 
 // props
 const props = defineProps<{ setting: typeof AppConfig }>()
 
 // uses
-const { locale, t } = useI18n()
-const { providerMode } = useProviderMode()
-const { getHome } = useBaseUrl()
-const { colorMode, toggleDark } = useClientThemeMode(props.setting)
+const {locale, t} = useI18n()
+const {providerMode} = useProviderMode()
+const {getHome} = useBaseUrl()
+const {colorMode, toggleDark} = useClientThemeMode(props.setting)
 
 // datas
 const v = ref((pkg as any).version)
@@ -31,7 +31,7 @@ const footer = props.setting?.footer ?? ""
 
 // methods
 const goGithub = () => {
-  window.open("https://github.com/terwer/siyuan-plugin-blog")
+  window.open("https://github.com/Astral-Yang/siyuan-plugin-blog")
 }
 
 const goAbout = () => {
@@ -44,7 +44,7 @@ const goHome = () => {
   window.open(home)
 }
 
-const emitToggleThemeMode = (key: "auto"|"light"|"dark") => {
+const emitToggleThemeMode = (key: "auto" | "light" | "dark") => {
   if (key === "dark" && colorMode.value) {
     return
   }
@@ -55,10 +55,10 @@ const emitToggleThemeMode = (key: "auto"|"light"|"dark") => {
 }
 
 const VNode = () =>
-  h("div", {
-    class: "",
-    innerHTML: footer,
-  })
+    h("div", {
+      class: "",
+      innerHTML: footer,
+    })
 
 // lifecycles
 onBeforeMount(() => {
@@ -71,21 +71,21 @@ onBeforeMount(() => {
 
 <template>
   <div v-if="!providerMode && StrUtil.isEmptyString(footer)" class="footer">
-    <static-buttons :default-mode="colorMode?'dark':'light'" @toggle-theme-mode="emitToggleThemeMode" />
+    <static-buttons :default-mode="colorMode?'dark':'light'" @toggle-theme-mode="emitToggleThemeMode"/>
 
     <span class="text"> &copy;2011-{{ nowYear }} </span>
-    <span class="text s-dark" @click="goGithub()">&nbsp;{{ t("name") }}</span>
+    <span class="text s-dark" @click="goGithub()">&nbsp;{{ t("name") + '(Modify)' }}</span>
 
     <span class="text">v{{ v }}&nbsp;</span>
 
     <span class="text s-dark" @click="goHome()">{{ t("go.home") }}</span>
 
-    <span class="text dot">.</span>
-    <span class="text s-dark" @click="goAbout()">{{ t("syp.about") }}</span>
+    <!--    <span class="text dot">.</span>-->
+    <!--    <span class="text s-dark" @click="goAbout()">{{ t("syp.about") }}</span>-->
   </div>
   <div v-else class="footer">
-    <static-buttons :default-mode="colorMode?'dark':'light'" @toggle-theme-mode="emitToggleThemeMode" />
-    <VNode />
+    <static-buttons :default-mode="colorMode?'dark':'light'" @toggle-theme-mode="emitToggleThemeMode"/>
+    <VNode/>
   </div>
 </template>
 
