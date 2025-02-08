@@ -1,5 +1,17 @@
 # Changelog
 
+## [7.3.0](https://github.com/Astral-Yang/siyuan-plugin-blog/compare/siyuan-plugin-blog-v7.2.1...siyuan-plugin-blog-v7.3.0) (2025-02-08)
+
+
+### Features
+
+* 增加刷新按钮 ([ea1959e](https://github.com/Astral-Yang/siyuan-plugin-blog/commit/ea1959e95c443b7703a232e4cbfacece62ec8da3))
+
+
+### Bug Fixes
+
+* 修复布局问题 ([ea1959e](https://github.com/Astral-Yang/siyuan-plugin-blog/commit/ea1959e95c443b7703a232e4cbfacece62ec8da3))
+
 ## [7.2.1](https://github.com/Astral-Yang/siyuan-plugin-blog/compare/siyuan-plugin-blog-v7.2.0...siyuan-plugin-blog-v7.2.1) (2025-02-08)
 
 
