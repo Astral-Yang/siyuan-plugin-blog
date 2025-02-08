@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.2.0](https://github.com/Astral-Yang/siyuan-plugin-blog/compare/siyuan-plugin-blog-v7.1.0...siyuan-plugin-blog-v7.2.0) (2025-02-08)
+
+
+### Features
+
+* id加密处理 ([1e98c87](https://github.com/Astral-Yang/siyuan-plugin-blog/commit/1e98c87c08d4efcfc7198712fcc3a97e4fc5097f))
+
 ## [7.1.0](https://github.com/Astral-Yang/siyuan-plugin-blog/compare/siyuan-plugin-blog-v7.0.4...siyuan-plugin-blog-v7.1.0) (2025-02-08)
 
 
