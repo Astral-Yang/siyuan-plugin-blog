@@ -38,7 +38,9 @@ const basePath = "/plugins/siyuan-blog/app/#"
 // datas
 const formData = reactive({
   setting: {} as any,
-  post: {} as any,
+  post: {
+    title: 'Loading'
+  } as any,
 
   shared: false,
   isHome: false,
@@ -109,6 +111,30 @@ const handleShare = () => {
           if (formData.isHome) {
             formData.shared = true
             showMessage(props.pluginInstance.i18n["blog.index.home.exists"], 7000, "error")
+            return false
+          }
+          return true
+        }
+    ).catch((error) => {
+      reject(error)
+    })
+  })
+}
+
+const refreshShare = () => {
+// eslint-disable-next-line no-new
+  new Promise<void>((resolve, reject) => {
+    handleMethodAsync(
+        async () => {
+          await updateStaticShare(props.id)
+          logger.info("updated static share in auth mode")
+          showMessage(props.pluginInstance.i18n["share.refreshInfo"], 2000, "info")
+          resolve()
+        },
+        () => {
+          if (formData.isHome) {
+            formData.shared = true
+            showMessage(props.pluginInstance.i18n["share.refreshError"], 2000, "error")
             return false
           }
           return true
@@ -244,7 +270,8 @@ logger.debug("share inited", props)
         <span class="setting-label">
           {{ pluginInstance.i18n["share.to.web"] }} - {{ pluginInstance.i18n["share.to.web.before.tip"] }}
         </span>
-        <input class="b3-switch fn__flex-center" type="checkbox" v-model="formData.shared" @change="handleShare">
+        <input class="b3-switch fn__flex-center" type="checkbox" v-model="formData.shared"
+               :disabled="Object.keys(formData.post).length===0" @change="handleShare">
       </div>
     </div>
 
@@ -255,6 +282,7 @@ logger.debug("share inited", props)
           <input type="text" v-model="formData.shareLink" readonly class="share-link-input" @click="viewDoc"
                  :title="pluginInstance.i18n['share.click.view']"/>
           <button @click="copyWebLink">{{ pluginInstance.i18n["share.copy.web.link"] }}</button>
+          <button style="background-color: #E6A23C" @click="refreshShare">{{ pluginInstance.i18n["share.refresh"] }}</button>
         </div>
       </div>
 
@@ -269,7 +297,7 @@ logger.debug("share inited", props)
         </div>
       </div>
 
-      <div class="info-text">{{ pluginInstance.i18n["share.static.tip"] }}</div>
+      <!--      <div class="info-text">{{ pluginInstance.i18n["share.static.tip"] }}</div>-->
 
       <div class="setting-row">
         <span class="setting-label">{{ pluginInstance.i18n["share.other.option.link.expires"] }}</span>

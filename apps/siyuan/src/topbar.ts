@@ -79,8 +79,10 @@ export class Topbar {
     // 取消小手图标
     document.getElementById(`${menuID}-wrapper`).parentElement.style.cursor = 'auto';
     // 取消默认边距，边框
-    document.getElementById(`${menuID}-wrapper`).parentElement.parentElement.parentElement.style.padding = '0px';
-    document.getElementById(`${menuID}-wrapper`).parentElement.parentElement.parentElement.style.border = '0px';
+    document.getElementById(`${menuID}-wrapper`).parentElement.parentElement.style.padding = '0';
+    document.getElementById(`${menuID}-wrapper`).parentElement.parentElement.style.border = '0';
+    document.getElementById(`${menuID}-wrapper`).parentElement.parentElement.style.backgroundColor = 'transparent';
+    document.getElementById(`${menuID}-wrapper`).parentElement.parentElement.style.color='var(--b3-theme-on-background)'
     if (!this.rect) {
       this.rect = this.topBarElement.getBoundingClientRect()
     }
