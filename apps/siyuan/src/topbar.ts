@@ -67,16 +67,20 @@ export class Topbar {
     elements.forEach(element => {
       element.remove()
     })
-    
-    if (!this.contentMenu) {
-      this.contentMenu = new Menu(menuID)
-    }
+
+    this.contentMenu = new Menu(menuID)
     this.contentMenuElement?.remove()
     const contentWrapper = Object.assign(document.createElement("div"), {
       id: `${menuID}-wrapper`,
       className: "share-free-edition-menu-content"
     })
     this.contentMenuElement = this.contentMenu.addItem({element: contentWrapper})
+
+    // 取消小手图标
+    document.getElementById(`${menuID}-wrapper`).parentElement.style.cursor = 'auto';
+    // 取消默认边距，边框
+    document.getElementById(`${menuID}-wrapper`).parentElement.parentElement.parentElement.style.padding = '0px';
+    document.getElementById(`${menuID}-wrapper`).parentElement.parentElement.parentElement.style.border = '0px';
     if (!this.rect) {
       this.rect = this.topBarElement.getBoundingClientRect()
     }
