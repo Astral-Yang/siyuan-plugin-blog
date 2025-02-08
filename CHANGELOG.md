@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.0.3](https://github.com/Astral-Yang/siyuan-plugin-blog/compare/siyuan-plugin-blog-v7.0.2...siyuan-plugin-blog-v7.0.3) (2025-02-08)
+
+
+### Bug Fixes
+
+* 修复插入位置的问题 ([6e8bf59](https://github.com/Astral-Yang/siyuan-plugin-blog/commit/6e8bf5964aa28abbe3e10c64ecc9ee97bfbb39d5))
+
 ## [7.0.2](https://github.com/Astral-Yang/siyuan-plugin-blog/compare/siyuan-plugin-blog-v7.0.1...siyuan-plugin-blog-v7.0.2) (2025-02-07)
 
 
