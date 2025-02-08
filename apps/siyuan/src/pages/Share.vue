@@ -19,6 +19,7 @@ import {useSettingStore} from "../stores/useSettingStore.ts"
 import {useMethod} from "../composables/useMethod.ts"
 import {useMethodAsync} from "../composables/useMethodAsync.ts"
 import {useStaticShare} from "../composables/useStaticShare.ts"
+import {encrypt} from "../utils/encryptUtil.ts";
 
 const props = defineProps({
   pluginInstance: Object,
@@ -209,7 +210,7 @@ onBeforeMount(async () => {
 
   formData.shared = attrs["custom-publish-status"] === "publish"
   formData.isHome = formData.setting.homePageId === props.id
-  formData.shareLink = `${shareOrigin}${basePath}/s/${props.id}`
+  formData.shareLink = `${shareOrigin}${basePath}/s/${encrypt(props.id)}`
   formData.expiredTime = attrs["custom-expires"] ?? 0
   const {hostname, ips} = getIps()
   formData.ip = hostname
