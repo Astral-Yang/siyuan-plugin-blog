@@ -271,7 +271,7 @@ logger.debug("share inited", props)
           {{ pluginInstance.i18n["share.to.web"] }} - {{ pluginInstance.i18n["share.to.web.before.tip"] }}
         </span>
         <input class="b3-switch fn__flex-center" type="checkbox" v-model="formData.shared"
-               :disabled="Object.keys(formData.post).length===0" @change="handleShare">
+               :disabled="Object.keys(formData.post).length===1" @change="handleShare">
       </div>
     </div>
 

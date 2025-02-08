@@ -74,7 +74,6 @@ function handleTabClick(index: number) {
   border-radius 8px
   overflow hidden
   background-color #fff
-  margin 10px
 
 .tabs.vertical
   flex-direction row
