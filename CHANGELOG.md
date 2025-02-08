@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.3.3](https://github.com/Astral-Yang/siyuan-plugin-blog/compare/siyuan-plugin-blog-v7.3.2...siyuan-plugin-blog-v7.3.3) (2025-02-08)
+
+
+### Bug Fixes
+
+* 优化显示效果 ([bc5b450](https://github.com/Astral-Yang/siyuan-plugin-blog/commit/bc5b4500ad4dc40e211ee15effd043ee567182cb))
+
 ## [7.3.2](https://github.com/Astral-Yang/siyuan-plugin-blog/compare/siyuan-plugin-blog-v7.3.1...siyuan-plugin-blog-v7.3.2) (2025-02-08)
 
 
