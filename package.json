@@ -1,6 +1,6 @@
 {
   "name": "siyuan-plugin-blog",
-  "version": "7.2.0",
+  "version": "7.2.1",
   "scripts": {
     "devApp": "pnpm dev -F @terwer/share-pro-app -- --host",
     "devSiyuan": "pnpm build -F siyuan-blog -- --watch",

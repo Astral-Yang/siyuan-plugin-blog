@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.2.1](https://github.com/Astral-Yang/siyuan-plugin-blog/compare/siyuan-plugin-blog-v7.2.0...siyuan-plugin-blog-v7.2.1) (2025-02-08)
+
+
+### Bug Fixes
+
+* 修复拼接问题 ([189b4f3](https://github.com/Astral-Yang/siyuan-plugin-blog/commit/189b4f3e27fc0efc5cf3973bbb19c08d50e210d0))
+
 ## [7.2.0](https://github.com/Astral-Yang/siyuan-plugin-blog/compare/siyuan-plugin-blog-v7.1.0...siyuan-plugin-blog-v7.2.0) (2025-02-08)
 
 
