@@ -253,7 +253,7 @@ logger.debug("share inited", props)
         <div class="input-group">
           <input type="text" v-model="formData.shareLink" readonly class="share-link-input" @click="viewDoc"
                  :title="pluginInstance.i18n['share.click.view']"/>
-          <button id="pluginBtn" @click="copyWebLink">{{ pluginInstance.i18n["share.copy.web.link"] }}</button>
+          <button @click="copyWebLink">{{ pluginInstance.i18n["share.copy.web.link"] }}</button>
         </div>
       </div>
 
@@ -275,7 +275,7 @@ logger.debug("share inited", props)
         <div class="input-group">
           <input v-model="formData.expiredTime" class="share-expired-input" type="number" min="0" step="1"
                  :placeholder='pluginInstance.i18n["share.link.expires.time.placeholder"]'/>
-          <button id="pluginBtn" @click="handleExpiresTime">{{ pluginInstance.i18n["main.opt.save"] }}</button>
+          <button @click="handleExpiresTime">{{ pluginInstance.i18n["main.opt.save"] }}</button>
         </div>
       </div>
 
@@ -367,7 +367,7 @@ logger.debug("share inited", props)
 
 /* 表明是不可交互的 */
 
-.pluginBtn
+button
   padding 4px 12px
   font-size 14px
   color #ffffff
@@ -381,7 +381,7 @@ logger.debug("share inited", props)
 
 /* 按钮保持固定大小 */
 
-.pluginBtn:hover
+button:hover
   background-color #005bb5
   transform scale(1.05)
 
@@ -405,10 +405,10 @@ html[data-theme-mode="light"]
     background-color #f0f0f0
     color #aaaaaa
 
-  .pluginBtn
+  button
     background-color #0073e6
 
-  .pluginBtn:hover
+  button:hover
     background-color #005bb5
 
   .info-text
@@ -450,10 +450,10 @@ html[data-theme-mode="dark"]
     background-color #3a3a3a
     color #666666
 
-  .pluginBtn
+  button
     background-color #0073e6
 
-  .pluginBtn:hover
+  button:hover
     background-color #005bb5
 
   .info-text
