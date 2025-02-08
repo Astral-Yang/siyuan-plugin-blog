@@ -10,6 +10,7 @@
 import {createAppLogger} from "../utils/appLogger.ts"
 import {useSiyuanApi} from "./useSiyuanApi.ts"
 import {useStaticAssets} from "./useStaticAssets.ts"
+import {encrypt} from "../utils/encryptUtil.ts";
 
 /**
  * 静态分享相关处理（开启授权码模式）
@@ -20,6 +21,7 @@ export const useStaticShare = () => {
   const {downloadAssetsToPublic} = useStaticAssets()
 
   const updateSharePage = async (pageId: string, post: any) => {
+    pageId = encrypt(pageId)
     const shareJsonFile = `/data/public/siyuan-blog/${pageId}.json`
     const pubicAssetsFolder = `/data/public/siyuan-blog/${pageId}`
 
@@ -38,6 +40,7 @@ export const useStaticShare = () => {
   }
 
   const removeSharePage = async (pageId: string) => {
+    pageId = encrypt(pageId)
     const shareJsonFile = `/data/public/siyuan-blog/${pageId}.json`
     const pubicAssetsFolder = `/data/public/siyuan-blog/${pageId}`
 

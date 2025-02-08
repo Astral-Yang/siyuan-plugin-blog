@@ -15,14 +15,6 @@ import Share from "./pages/Share.vue"
 import Setting from "./pages/Setting/Index.vue"
 import SiyuanBlogPlugin from "./index"
 
-function encrypt(input) {
-  return btoa(input.split('').map(c => String.fromCharCode(c.charCodeAt(0) ^ 42)).join(''));
-}
-
-function decrypt(encrypted) {
-  return atob(encrypted).split('').map(c => String.fromCharCode(c.charCodeAt(0) ^ 42)).join('');
-}
-
 /**
  * 顶部按钮
  */
@@ -55,7 +47,7 @@ export class Topbar {
       }
       this.addMenu(Share, {
         pluginInstance: this.pluginInstance,
-        id: encrypt(pageId),
+        id: pageId,
         origin: window.location.origin,
       }, "share-free-edition-content-menu")
     })
