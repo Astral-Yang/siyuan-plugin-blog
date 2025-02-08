@@ -71,12 +71,12 @@ export class Topbar {
     if (!this.contentMenu) {
       this.contentMenu = new Menu(menuID)
     }
-    // this.contentMenuElement?.remove()
+    this.contentMenuElement?.remove()
     const contentWrapper = Object.assign(document.createElement("div"), {
       id: `${menuID}-wrapper`,
       className: "share-free-edition-menu-content"
     })
-    this.contentMenuElement = this.contentMenu.element.appendChild(contentWrapper)
+    this.contentMenuElement = this.contentMenu.addItem({element: contentWrapper})
     if (!this.rect) {
       this.rect = this.topBarElement.getBoundingClientRect()
     }
