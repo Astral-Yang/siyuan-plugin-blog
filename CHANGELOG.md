@@ -1,5 +1,44 @@
 # Changelog
 
+## [7.4.0](https://github.com/Astral-Yang/siyuan-plugin-blog/compare/siyuan-plugin-blog-v7.3.3...siyuan-plugin-blog-v7.4.0) (2026-01-18)
+
+
+### Features
+
+* add password feature 🍰 ([7e19064](https://github.com/Astral-Yang/siyuan-plugin-blog/commit/7e19064b34e1275282b8fcf1ba50b7769fe88844))
+* add password feature ok 🍰 ([3604fa9](https://github.com/Astral-Yang/siyuan-plugin-blog/commit/3604fa9e37aad8a7d911652c91a0536c0a604141))
+* add password feature release 🍰 ([7a95844](https://github.com/Astral-Yang/siyuan-plugin-blog/commit/7a9584432c8b05d2e642e6ed65ab49887fdddd8f))
+* add stable Suspense feature 🌹 ([c150aac](https://github.com/Astral-Yang/siyuan-plugin-blog/commit/c150aaca76619f82d0c3d2751afb0f91d0cccf99))
+* **app:** add ECharts and HTML block rendering support, and image preview functionality ([e462799](https://github.com/Astral-Yang/siyuan-plugin-blog/commit/e462799e2468b42148d9adbfe7903b8df06f40ef))
+* **app:** add ECharts rendering support ([a5a33d4](https://github.com/Astral-Yang/siyuan-plugin-blog/commit/a5a33d41b3ab74f4edf3ea3d7cd5dfea179dafc5))
+* **app:** add HTML block rendering support ([4dbc299](https://github.com/Astral-Yang/siyuan-plugin-blog/commit/4dbc29904aca43eccbddfc0fb778d6d29ab144dd))
+* **app:** add image preview functionality- Add ImagePreview component for zooming in on images ([12160b0](https://github.com/Astral-Yang/siyuan-plugin-blog/commit/12160b08a9e890139dfa0c2b29e3cbe5404ac283))
+* **app:** add js-base64 and vue-easy-lightbox dependencies ([ef9b3f9](https://github.com/Astral-Yang/siyuan-plugin-blog/commit/ef9b3f9ca6bfb2046026b318760e2ff08f4cdbdd))
+* **app:** add siyuan artifacts build ([0782a6a](https://github.com/Astral-Yang/siyuan-plugin-blog/commit/0782a6a101632adeebe596d84d78518ba1817111))
+* **app:** add siyuan artifacts build ([13f16df](https://github.com/Astral-Yang/siyuan-plugin-blog/commit/13f16dfbbbb1fe7c628693a0e3b9bed8f5e72183))
+* **siyuan:** add clear all shares functionality ([dac8102](https://github.com/Astral-Yang/siyuan-plugin-blog/commit/dac810289f00c19da572ed9c9c1555f91c5b1b18))
+
+
+### Bug Fixes
+
+* image not show in some cases ([8ba395f](https://github.com/Astral-Yang/siyuan-plugin-blog/commit/8ba395f3b860fb939c57cf5ede0369d4fc6ea515))
+* image not show in some cases ([f637dad](https://github.com/Astral-Yang/siyuan-plugin-blog/commit/f637dad51ae6f0a852719c782017c087ff9af442))
+* provider build script ([e669cd1](https://github.com/Astral-Yang/siyuan-plugin-blog/commit/e669cd1b2ad27aeb363f4a51ad23bbe0206e2028))
+
+
+### Code Refactoring
+
+* **i18n:** migrate i18n to json format and update configurations ([2529ca0](https://github.com/Astral-Yang/siyuan-plugin-blog/commit/2529ca0d2d1bde2e78c5203cf11d852842e1ebb8))
+* **i18n:** migrate i18n to json format and update configurations ([48b5164](https://github.com/Astral-Yang/siyuan-plugin-blog/commit/48b516485a0e9b0e7700d841ce69beeccf1ab77c))
+
+
+### Miscellaneous
+
+* **main:** release siyuan-plugin-blog 6.4.1 ([4a9f3a7](https://github.com/Astral-Yang/siyuan-plugin-blog/commit/4a9f3a7cd52976aa31f7c5a1947c10ad96f823f1))
+* **main:** release siyuan-plugin-blog 6.5.0 ([204b931](https://github.com/Astral-Yang/siyuan-plugin-blog/commit/204b93127afb4782677dc48516076229ddae40fc))
+* **main:** release siyuan-plugin-blog 6.6.0 ([59f07ae](https://github.com/Astral-Yang/siyuan-plugin-blog/commit/59f07aea03de301e6c1adf625238c5485105c8f7))
+* **release:** bump version to 6.6.0 ([a3829ae](https://github.com/Astral-Yang/siyuan-plugin-blog/commit/a3829ae1ce2b442de6a253d26a8ff7d04b7e80c3))
+
 ## [7.3.3](https://github.com/Astral-Yang/siyuan-plugin-blog/compare/siyuan-plugin-blog-v7.3.2...siyuan-plugin-blog-v7.3.3) (2025-02-08)
 
 
