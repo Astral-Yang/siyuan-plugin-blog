@@ -7,18 +7,13 @@
  *  of this license document, but changing it is not allowed.
  */
 
-import en_US from "~/i18n/en_US"
-import zh_CN from "~/i18n/zh_CN"
-
 /**
- * 国际化
+ * ECharts 渲染插件 - 服务端
  *
- * @see locale-detector https://i18n.nuxtjs.org/docs/composables/define-i18n-locale-detector
+ * @author terwer
+ * @version 1.0.0
+ * @since 0.0.1
  */
-export default defineI18nConfig(() => ({
-  legacy: false,
-  messages: {
-    zh_CN,
-    en_US,
-  },
-}))
+export default defineNuxtPlugin(({ vueApp }) => {
+  vueApp.directive("echarts", {})
+}) 
